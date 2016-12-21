@@ -31,7 +31,8 @@ SET(MYSQLSERVICES_SOURCES
   encryption_service.c
   encryption_scheme_service.c
   kill_statement_service.c
-  logger_service.c)
+  logger_service.c
+  my_crypt_service.c)
 
 ADD_CONVENIENCE_LIBRARY(mysqlservices ${MYSQLSERVICES_SOURCES})
 INSTALL(TARGETS mysqlservices DESTINATION ${INSTALL_LIBDIR} COMPONENT Development)

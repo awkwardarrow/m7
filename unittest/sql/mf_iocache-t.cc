@@ -14,7 +14,7 @@
    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA */
 
 #include <my_sys.h>
-#include <my_crypt.h>
+#include <mysql/service_my_crypt.h>
 #include <tap.h>
 
 /*** tweaks and stubs for encryption code to compile ***************/

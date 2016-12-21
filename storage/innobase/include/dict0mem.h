@@ -49,7 +49,7 @@ Created 1/8/1996 Heikki Tuuri
 #include "fts0fts.h"
 #include "os0once.h"
 #include "fil0fil.h"
-#include <my_crypt.h>
+#include <mysql/service_my_crypt.h>
 #include "fil0crypt.h"
 #include <set>
 #include <algorithm>

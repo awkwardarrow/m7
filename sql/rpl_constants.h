@@ -18,7 +18,7 @@
 #define RPL_CONSTANTS_H
 
 #include <my_sys.h>
-#include <my_crypt.h>
+#include <mysql/service_my_crypt.h>
 
 /**
    Enumeration of the incidents that can occur for the server.

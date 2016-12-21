@@ -18,7 +18,7 @@
 
 #include <my_global.h>
 #include <my_sys.h>
-#include <my_crypt.h>
+#include <mysql/service_my_crypt.h>
 
 C_MODE_START
 
