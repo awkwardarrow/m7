@@ -18,7 +18,7 @@
 #include <my_global.h>
 #include "maria_def.h"
 #include "ma_blockrec.h"
-#include <my_crypt.h>
+#include <mysql/service_my_crypt.h>
 
 #define CRYPT_SCHEME_1         1
 #define CRYPT_SCHEME_1_ID_LEN  4 /* 4 bytes for counter-block */

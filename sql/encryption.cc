@@ -17,7 +17,7 @@
 #include <mysql/plugin_encryption.h>
 #include "log.h"
 #include "sql_plugin.h"
-#include <my_crypt.h>
+#include <mysql/service_my_crypt.h>
 
 /* there can be only one encryption plugin enabled */
 static plugin_ref encryption_manager= 0;

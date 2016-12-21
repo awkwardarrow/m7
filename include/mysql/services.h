@@ -34,6 +34,7 @@ extern "C" {
 #include <mysql/service_thd_specifics.h>
 #include <mysql/service_encryption.h>
 #include <mysql/service_encryption_scheme.h>
+#include <mysql/service_my_crypt.h>
 /*#include <mysql/service_wsrep.h>*/
 
 #ifdef __cplusplus

@@ -194,7 +194,7 @@ public:
   const char *func_name() const { return "from_base64"; }
 };
 
-#include <my_crypt.h>
+#include <mysql/service_my_crypt.h>
 
 class Item_aes_crypt :public Item_str_binary_checksum_func
 {

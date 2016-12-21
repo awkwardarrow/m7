@@ -16,7 +16,7 @@
 
 #include <my_global.h>
 #include <my_sys.h>
-#include <my_crypt.h>
+#include <mysql/service_my_crypt.h>
 #include <tap.h>
 #include <string.h>
 #include <ctype.h>

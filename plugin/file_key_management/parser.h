@@ -20,7 +20,7 @@ A structure and class to keep keys for encryption/decryption.
 Created 09/15/2014
 ***********************************************************************/
 
-#include <my_crypt.h>
+#include <mysql/service_my_crypt.h>
 #include <ctype.h>
 #include <sql_array.h>
 
