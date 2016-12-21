@@ -36,7 +36,7 @@ IF(UNIX)
 ENDIF()
 
 IF(WITH_LIBARCHIVE AND NOT LibArchive_FOUND)
-  IF(CMAKE_VERSION VERSION_LESS "2.8.9")
+  IF(CMAKE_VERSION VERSION_LESS "2.8.12")
     MESSAGE("libarchive can't be built, old cmake")
   ELSE()
     # Build a local version
@@ -62,7 +62,7 @@ IF(WITH_LIBARCHIVE AND NOT LibArchive_FOUND)
     ExternalProject_Add(libarchive
       PREFIX ${libarchive_PREFIX}
       DOWNLOAD_DIR ${LIBARCHIVE_DIR}
-      URL http://www.libarchive.org/downloads/libarchive-3.1.2.tar.gz
+      URL http://www.libarchive.org/downloads/libarchive-3.2.2.tar.gz
       INSTALL_DIR ${LIBARCHIVE_DIR}
       CMAKE_ARGS ${libarchive_CMAKE_ARGS}
     )
