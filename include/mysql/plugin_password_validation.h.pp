@@ -257,6 +257,35 @@ int encryption_scheme_decrypt(const unsigned char* src, unsigned int slen,
                               struct st_encryption_scheme *scheme,
                               unsigned int key_version, unsigned int i32_1,
                               unsigned int i32_2, unsigned long long i64);
+enum my_aes_mode {
+    MY_AES_ECB, MY_AES_CBC
+};
+extern struct my_crypt_service_st {
+  int (*my_aes_crypt_init)(void *ctx, enum my_aes_mode mode, int flags,
+                      const unsigned char* key, unsigned int klen,
+                      const unsigned char* iv, unsigned int ivlen);
+  int (*my_aes_crypt_update)(void *ctx, const unsigned char *src, unsigned int slen,
+                        unsigned char *dst, unsigned int *dlen);
+  int (*my_aes_crypt_finish)(void *ctx, unsigned char *dst, unsigned int *dlen);
+  int (*my_aes_crypt)(enum my_aes_mode mode, int flags,
+                 const unsigned char *src, unsigned int slen, unsigned char *dst, unsigned int *dlen,
+                 const unsigned char *key, unsigned int klen, const unsigned char *iv, unsigned int ivlen);
+  unsigned int (*my_aes_get_size)(enum my_aes_mode mode, unsigned int source_length);
+  unsigned int (*my_aes_ctx_size)(enum my_aes_mode mode);
+  int (*my_random_bytes)(unsigned char* buf, int num);
+} *my_crypt_service;
+int my_aes_crypt_init(void *ctx, enum my_aes_mode mode, int flags,
+                      const unsigned char* key, unsigned int klen,
+                      const unsigned char* iv, unsigned int ivlen);
+int my_aes_crypt_update(void *ctx, const unsigned char *src, unsigned int slen,
+                        unsigned char *dst, unsigned int *dlen);
+int my_aes_crypt_finish(void *ctx, unsigned char *dst, unsigned int *dlen);
+int my_aes_crypt(enum my_aes_mode mode, int flags,
+                 const unsigned char *src, unsigned int slen, unsigned char *dst, unsigned int *dlen,
+                 const unsigned char *key, unsigned int klen, const unsigned char *iv, unsigned int ivlen);
+int my_random_bytes(unsigned char* buf, int num);
+unsigned int my_aes_get_size(enum my_aes_mode mode, unsigned int source_length);
+unsigned int my_aes_ctx_size(enum my_aes_mode mode);
 struct st_mysql_xid {
   long formatID;
   long gtrid_length;
