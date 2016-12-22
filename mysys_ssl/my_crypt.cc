@@ -273,7 +273,7 @@ int my_aes_crypt(enum my_aes_mode mode, int flags,
   Without padding (ENCRYPTION_FLAG_NOPAD) cyphertext has the same length
   as the plaintext
 */
-unsigned int my_aes_get_size(enum my_aes_mode , unsigned int source_length)
+unsigned int my_aes_get_size(enum my_aes_mode mode __attribute__((unused)), unsigned int source_length)
 {
 #ifdef HAVE_EncryptAes128Ctr
   if (mode == MY_AES_CTR)
