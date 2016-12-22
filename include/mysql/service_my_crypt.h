@@ -23,11 +23,11 @@
  my crypt service
 
  AES encryption functions, and a function to generate random bytes.
+
+ Include my_config.h before this file to use CTR and GCM modes
+ (they only work if server was compiled with  openssl).
 */
 
-#ifndef MYSQL_ABI_CHECK
-#include <my_config.h> /* HAVE_EncryptAes128Ctr */
-#endif
 
 #ifdef __cplusplus
 extern "C" {
